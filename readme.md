@@ -19,3 +19,5 @@ art apple article boat boar botswana approve ask add
 ## World list
 
 We need a list of words to build our Trie. I used [this one](data/words.txt). Also we will filter out words with length less than 4 later.
+
+## Code Structure
