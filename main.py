@@ -1,23 +1,27 @@
+from load import load
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
 
-from trie import Trie
-from os.path import join
-from tqdm import tqdm
-from time import time_ns
+# Load the trie
+trie = load("words.txt")
 
-file = open(join("data", "words.txt"), "r").readlines()
+# Create the FastAPI app
+app = FastAPI()
 
-trie = Trie()
 
-for line in tqdm(file, desc="Inserting words", total=len(file)):
+@app.get("/suggest/{word}")
+# Maps the `/suggest/{word}` path to the `suggest` function
+async def suggest(word: str):
 
-    if len(line) < 4:
-        continue
+    # Queries with less than 3 characters are inefficient, so we ignore them
+    if len(word) < 3:
+        return []
 
-    trie.insert(line.strip())
+    # Return the suggestions
+    return trie.startsWith(word)
 
-while True:
-    prefix = input("Enter a prefix: ")
-    t = time_ns()
-    result = trie.startsWith(prefix)
-    t2 = (time_ns() - t) / 10**6
-    print(f"Found {len(result)} words in {t2} ms")
+
+@app.get("/")
+# `/` will return index.html
+async def index():
+    return FileResponse("index.html")

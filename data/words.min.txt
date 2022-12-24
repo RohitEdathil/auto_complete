@@ -1,12 +1,5 @@
-helm
-helmage
-helmed
-helmet
-helmeted
-helmetflower
-helmeting
-helmetlike
-helmetmaker
-helmetmaking
-helmetpod
-helmets
+add
+art 
+apple 
+adict 
+approve

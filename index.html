@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autocomplete</title>
+  </head>
+  <body>
+    <input type="text" id="prefix" oninput="suggest()" />
+    <p id="words"></p>
+  </body>
+
+  <style>
+    html {
+      background-color: rgb(50, 50, 50);
+      margin: 0px;
+      font-family: monospace;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0px;
+    }
+
+    input {
+      width: 300px;
+      height: 30px;
+      font-size: 20px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #words {
+      margin-top: 20px;
+      font-size: 20px;
+      height: 500px;
+      background-color: rgb(39, 39, 39);
+      color: white;
+      width: 300px;
+      padding: 12px;
+      border-radius: 20px;
+      overflow: auto;
+    }
+  </style>
+
+  <script>
+    function suggest() {
+      const req = new XMLHttpRequest();
+      const q = document.getElementById("prefix").value;
+      req.open("GET", `http://localhost:8000/suggest/${q}`, true);
+
+      req.onload = function () {
+        const data = JSON.parse(this.response);
+        const words = document.getElementById("words");
+        words.innerHTML = "";
+        data.forEach((word) => {
+          const p = document.createElement("p");
+          p.innerHTML = word;
+          words.appendChild(p);
+        });
+      };
+
+      req.send();
+    }
+  </script>
+</html>
