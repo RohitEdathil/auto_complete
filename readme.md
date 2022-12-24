@@ -18,7 +18,7 @@ art apple article boat boar botswana approve ask add
 
 ## World list
 
-We need a list of words to build our Trie. I used [this one](https://github.com/RohitEdathil/auto_complete/blob/master/data/words.txt). Also we will filter out words with length less than 4 later.
+We need a list of words to build our Trie. I used [https://github.com/RohitEdathil/auto_complete/blob/master/data/words.txt](https://github.com/RohitEdathil/auto_complete/blob/master/data/words.txt). Also we will filter out words with length less than 4 later.
 
 ## Dependencies
 
