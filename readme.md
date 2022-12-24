@@ -14,7 +14,7 @@ Here is a Trie for the words
 art apple article boat boar botswana approve ask add
 ```
 
-![Trie](https://github.com/RohitEdathil/auto_complete/blob/master/img/1.jpg)
+![Trie](https://raw.githubusercontent.com/RohitEdathil/auto_complete/master/img/1.jpg)
 
 ## World list
 
@@ -67,7 +67,7 @@ add art apple adict approve
 ```
 
 The tree should look like this
-![Trie](https://github.com/RohitEdathil/auto_complete/blob/master/img/2.jpg)
+![Trie](https://raw.githubusercontent.com/RohitEdathil/auto_complete/master/img/2.jpg)
 
 When we think of this as a nested python dictionary it should be:
 
