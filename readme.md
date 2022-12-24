@@ -358,4 +358,4 @@ At this point you can run the server and open `http://localhost:8000` in your br
 
 - GitHub repo: [https://github.com/RohitEdathil/auto_complete](https://github.com/RohitEdathil/auto_complete)
 
-- Live demo: [https://auto-complete.rohitedathil.repl.co/](https://auto-complete.rohitedathil.repl.co/)
+- Live demo: [https://autocomplete.rohitv.repl.co/](https://autocomplete.rohitv.repl.co/)
