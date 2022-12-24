@@ -14,11 +14,11 @@ Here is a Trie for the words
 art apple article boat boar botswana approve ask add
 ```
 
-![Trie](img/1.jpg)
+![Trie](https://github.com/RohitEdathil/auto_complete/blob/master/img/1.jpg)
 
 ## World list
 
-We need a list of words to build our Trie. I used [this one](data/words.txt). Also we will filter out words with length less than 4 later.
+We need a list of words to build our Trie. I used [this one](https://github.com/RohitEdathil/auto_complete/blob/master/data/words.txt). Also we will filter out words with length less than 4 later.
 
 ## Dependencies
 
@@ -67,7 +67,7 @@ add art apple adict approve
 ```
 
 The tree should look like this
-![Trie](img/2.jpg)
+![Trie](https://github.com/RohitEdathil/auto_complete/blob/master/img/2.jpg)
 
 When we think of this as a nested python dictionary it should be:
 
